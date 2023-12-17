@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<title>Musicas</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</head>
+<body>
+    <h1>Trab Musicas</h1>
+    <div class="button-container">
+      <button class="button" id="btnbusca">Fazer uma busca</button>
+      <button id="btncad" class="button">Cadastrar</button>
+    </div>
+    <form id="formulario"style="display: none;">
+      <label for="titulo">Titulo:</label>
+      <input type="text" id="titulo" name="titulo" required>
+      
+      <label for="artista">Artista:</label>
+      <input type="text" id="artista" name="artista" required>
+      
+      <label for="duracao">Duracao:</label>
+      <input type="number" id="duracao" name="duracao" required>
+      <label for="categoria">Escolha uma Categoria:</label>
+       <select id="categoria" name="categoria">
+      
+        </select>   
+      <button type="button" onclick="cadastrar()">Cadastrar</button>
+    </form>
+    <div style="display:none"id="musicasTab">
+      <label>Buscar Musicas</label>
+      <div class="search-box">
+        <input type="text" id="filtro" >
+        <button  onclick="fazerBusca()"><i class="fas fa-search"></i></button>
+      </div>
+      
+      <select id="tpfiltro" name="tpfiltro">
+        <option value="1">Titulo</option>
+        <option value="2">Artista</option>
+        <option value="3">Categoria</option>
+        </select> 
+    <table >
+        <thead>
+          <tr>
+            <th>Titulo</th>
+            <th>Artista</th>
+            <th>Duracao</th>
+            <th>Categoria</th>
+          </tr>
+        </thead>
+        <tbody id="tabcorpo">
+          
+        </tbody>
+      </table>
+    </div>
+  </body>
+  <script src="index.js"></script>
+</html>
